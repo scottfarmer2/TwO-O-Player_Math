@@ -4,7 +4,7 @@
 require 'pry'
 require './player'
 require './question'
-require './game'
+
 
 
 # newGame = MathGame::Game.new
@@ -30,6 +30,13 @@ start_game
 
 
   while @game_on
+
+      if @turn == 0
+        print "#{@player1}: "
+      elsif @turn == 1
+        print "#{@player2}: "
+      end
+
 
       question = MathGame::Question.new
 
